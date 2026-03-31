@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NORDIC SHELL | Reimagining Outdoor Luxury | Modular Sovereignty</title>
     <style>
-        /* === NORDIC SHELL LUXURY STYLING (B2B Focus) === */
+        /* === NORDIC SHELL LUXURY STYLING === */
         :root {
-            --bg-color: #000000; /* Minimalist Black */
+            --bg-color: #050505;
             --text-main: #FFFFFF;
-            --text-secondary: #AAAAAA;
-            --accent: #FFD700; /* Gold/Yellow from Elmo's Vision */
-            --accent-hover: #FFFACD;
-            --section-bg: #111111; /* Slight contrast */
-            --border: #222222;
-            --font-header: 'Oswald', sans-serif; /* Strong, authoritative */
-            --font-body: 'Montserrat', sans-serif; /* Clean, premium */
+            --text-secondary: #CCCCCC;
+            --accent: #D4AF37; /* Refined Gold */
+            --section-bg: #0A0A0A;
+            --border: #1A1A1A;
+            --font-header: 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Georgia', serif;
         }
 
-        /* --- Global Reset & Type --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background-color: var(--bg-color);
@@ -27,122 +25,87 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        h1, h2, h3, h4 { font-family: var(--font-header); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
-        h1 { font-size: 3.5rem; color: var(--text-main); }
-        h2 { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; text-align: center; }
-        h3 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 0.5rem; }
-        p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem; }
+        h1, h2, h3, h4 { font-family: var(--font-header); font-weight: 300; text-transform: uppercase; letter-spacing: 3px; }
+        h1 { font-size: 3rem; color: var(--text-main); margin-bottom: 20px; }
+        h2 { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; text-align: center; }
+        h3 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 10px; }
+        p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        img { max-width: 100%; height: auto; display: block; }
-        .u-highlight { color: var(--accent); }
+        img { max-width: 100%; height: auto; display: block; border: 1px solid var(--border); }
+        .u-highlight { color: var(--accent); font-weight: 400; }
 
-        /* --- Utility Classes --- */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .section { padding: 100px 0; border-bottom: 1px solid var(--border); }
         .btn {
             display: inline-block;
-            padding: 15px 35px;
-            background-color: var(--bg-color);
+            padding: 15px 40px;
+            background-color: transparent;
             color: var(--accent);
-            border: 2px solid var(--accent);
+            border: 1px solid var(--accent);
             font-family: var(--font-header);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 700;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
         .btn:hover {
             background-color: var(--accent);
             color: var(--bg-color);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
 
-        /* --- Header / Nav --- */
+        /* --- Header --- */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0,0,0,0.9);
-            padding: 20px 0;
+            background-color: rgba(5,5,5,0.95);
+            padding: 25px 0;
             z-index: 1000;
             border-bottom: 1px solid var(--border);
         }
         nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; color: var(--accent); font-family: var(--font-header); font-weight: 900; }
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { font-family: var(--font-header); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .nav-links a:hover { color: var(--accent); }
+        .logo { font-size: 1.5rem; color: var(--text-main); font-family: var(--font-header); letter-spacing: 5px; }
+        .nav-links { display: flex; list-style: none; gap: 40px; }
+        .nav-links a { font-family: var(--font-header); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-secondary); }
+        .nav-links a:hover { color: var(--text-main); }
 
-        /* --- Hero Section --- */
+        /* --- Hero --- */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-image: url('image_6.png'); /* The ultimate comparison diptych */
+            background-image: url('E5 kapseli Blank mustalla taustalla ulkoa.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
         }
-        .hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1; }
-        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
-        .hero-content h1 { margin-bottom: 20px; line-height: 1.1; }
-        .hero-content p { font-size: 1.3rem; margin-bottom: 40px; }
-
-        /* --- Intro Section --- */
-        .intro { background-color: var(--section-bg); text-align: center; }
-        .intro-text { max-width: 700px; margin: 0 auto; }
-
-        /* --- Models Section --- */
-        .model-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 100px;
-            align-items: center;
-        }
+        .hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 20px; }
+        
+        /* --- Models --- */
+        .model-card { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 120px; align-items: center; }
         .model-card:nth-child(even) { direction: rtl; }
         .model-card:nth-child(even) .model-info { direction: ltr; }
-        .model-info { padding: 20px; }
-        .model-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        .blueprint-link {
-            grid-column: span 2;
-            cursor: pointer;
-            border: 1px solid var(--border);
-            transition: 0.3s;
-        }
-        .blueprint-link:hover { border-color: var(--accent); opacity: 0.8; }
-        .price-tag { font-size: 1.5rem; color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: inline-block; }
+        .model-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .model-gallery img { width: 100%; height: 100%; object-fit: cover; }
+        .blueprint-link { grid-column: span 2; display: block; }
+        .blueprint-link img { border: 1px solid #333; }
+        .blueprint-link:hover img { border-color: var(--accent); opacity: 0.8; }
+        .price-tag { font-family: var(--font-header); font-size: 1.2rem; color: var(--accent); display: block; margin-bottom: 30px; letter-spacing: 1px; }
 
-        /* --- Customization (Elmo's Vision) --- */
-        .customize {
-            background-image: url('image_4.png'); /* The faceted Elmo's visions */
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            position: relative;
-        }
-        .customize::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1; }
-        .customize-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+        /* --- Footer --- */
+        footer { padding: 80px 0; background-color: var(--section-bg); text-align: center; }
+        .copyright { font-family: var(--font-header); font-size: 0.7rem; color: #666; margin-top: 40px; letter-spacing: 1px; }
 
-        /* --- Footer / Contact --- */
-        footer { padding: 50px 0; background-color: var(--section-bg); text-align: center; border-top: 1px solid var(--border); }
-        .secure-link { margin-bottom: 20px; font-size: 0.9rem; color: var(--text-secondary); }
-        .copyright { font-size: 0.8rem; color: #444; }
-
-        /* --- Responsive Styling --- */
         @media (max-width: 900px) {
-            h1 { font-size: 2.5rem; }
-            .model-card { grid-template-columns: 1fr; gap: 30px; }
+            .model-card { grid-template-columns: 1fr; gap: 40px; margin-bottom: 80px; }
             .model-card:nth-child(even) { direction: ltr; }
             .model-card:nth-child(even) .model-info { direction: ltr; }
-            .section { padding: 60px 0; }
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -151,10 +114,9 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">NS</a>
+                <a href="#" class="logo">NORDIC SHELL</a>
                 <ul class="nav-links">
-                    <li><a href="#models">Our Models</a></li>
-                    <li><a href="#customize">Customization</a></li>
+                    <li><a href="#models">Architecture</a></li>
                     <li><a href="#vault">Secure Portal</a></li>
                 </ul>
             </nav>
@@ -163,155 +125,71 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Reimagining Outdoor Luxury.</h1>
-            <p>Nordic Engineering meets <span class="u-highlight">Uncompromising Sovereignty</span>. Fully optimized modular shells for premium hospitality assets.</p>
-            <a href="#vault" class="btn">View Confidential Dossier</a>
+            <h1>Engineering Modular Sovereignty</h1>
+            <p>Premium architectural shells for luxury hospitality. Designed and engineered in Finland. We provide the uncompromised foundation; you define the experience.</p>
+            <a href="#vault" class="btn">Access Confidential Dossier</a>
         </div>
     </section>
 
-    <section class="intro section">
+    <section id="models" class="section">
         <div class="container">
-            <div class="intro-text">
-                <h2>The Canvas is Yours.</h2>
-                <p>NORDIC SHELL is not in the cabin business. We are in the <span class="u-highlight">sovereignty business</span>. We deliver state-of-the-art, engineering-grade modular shells that serve as the indestructible foundation for your hospitality vision. From bare engineering to absolute luxury — you define the experience; we deliver the asset.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="models" class="models section">
-        <div class="container">
-            <h2>The Engineering Lineup</h2>
-            <p style="text-align:center; max-width: 600px; margin: 0 auto 60px auto;">Choose your structural foundation. Compact efficiency or expansive luxury suites.</p>
+            <h2>The Architecture Lineup</h2>
+            <p style="text-align:center; max-width: 700px; margin: 0 auto 80px auto;">Strictly optimized floor plans. Rapid deployment. Maximum return on investment. Choose between our compact efficiency unit or the flagship panoramic suite.</p>
 
             <div class="model-card">
                 <div class="model-info">
                     <h3>The E5 Panoramic Suite</h3>
-                    <p class="u-highlight">Our flagship flagship. Built for the view.</p>
-                    <p>Designed to be the centerpiece of any premium glamping or boutique resort, the E5 features a sweeping panoramic glass front and a <span class="u-highlight">private integrated balcony</span>. It transforms raw nature into a five-star experience.</p>
-                    <span class="price-tag">Base Shell Starting at: 45,000 €</span>
+                    <p class="u-highlight">Our flagship asset. Built for the view.</p>
+                    <p>Measuring 8.5m in length, the E5 features a sweeping panoramic glass facade and a seamlessly integrated private balcony. It is designed to function as the centerpiece of premium glamping resorts, transforming raw nature into a high-yield hospitality asset.</p>
+                    <span class="price-tag">Base Shell Starting at: 45,000 EUR</span>
                     <a href="#vault" class="btn">Secure Production Slot</a>
                 </div>
                 <div class="model-gallery">
-                    <img src="image_13.png" alt="Nordic Shell E5 Standard (Bare Canvas)" title="E5 Standard Shell">
-                    <img src="image_0.png" alt="Nordic Shell E5 Elite Visualization (Arctic Suite Concept)" title="E5 Arctic Vision">
-                    <a href="image_25.png" target="_blank" class="blueprint-link" title="Click to view full E5 Blueprint">
-                        <img src="image_25.png" alt="Nordic Shell E5 Blueprint">
+                    <img src="E5 kapseli Blank mustalla taustalla ulkoa.jpg" alt="E5 Base Shell">
+                    <img src="E5 elmo´s kuoret maisemissa.jpg" alt="E5 Customization Vision">
+                    <a href="1000022951.jpg" target="_blank" class="blueprint-link" title="View Technical Blueprint">
+                        <img src="1000022951.jpg" alt="E5 Technical Blueprint">
                     </a>
                 </div>
             </div>
 
             <div class="model-card">
                 <div class="model-gallery">
-                    <img src="image_20.png" alt="Nordic Shell E3 Standard (Bare Canvas)" title="E3 Standard Shell">
-                    <img src="image_26.png" alt="Nordic Shell E3 Elite Visualization (Archipelago Concept)" title="E3 Archipelago Vision">
-                    <a href="image_24.png" target="_blank" class="blueprint-link" title="Click to view full E3 Blueprint">
-                        <img src="image_24.png" alt="Nordic Shell E3 Blueprint">
+                    <img src="E3 kapseli Blank mustallataustalla ulkoa.jpg" alt="E3 Base Shell">
+                    <img src="E3 esimerkki konsepti 2kpl.jpg" alt="E3 Customization Vision">
+                    <a href="1000022958.jpg" target="_blank" class="blueprint-link" title="View Technical Blueprint">
+                        <img src="1000022958.jpg" alt="E3 Technical Blueprint">
                     </a>
                 </div>
                 <div class="model-info">
                     <h3>The E3 Compact Suite</h3>
-                    <p class="u-highlight">Maximized efficiency. Uncompromised luxury.</p>
-                    <p>The E3 is our most versatile structural shell. Engineered for locations where space is a premium but luxury is a requirement. Fully equipped with an integrated bathroom setup, the E3 is perfect for <span class="u-highlight">pop-up hospitality</span>, exclusive spa units, or secluded meeting pods.</p>
-                    <span class="price-tag">Base Shell Starting at: 35,000 €</span>
-                    <a href="#vault" class="btn">Request ROI Case Study</a>
+                    <p class="u-highlight">Maximized efficiency. Zero compromises.</p>
+                    <p>The E3 is our most versatile structural shell. Engineered for locations where space is at a premium, it requires minimal footprint while delivering maximum luxury. Fully equipped with an integrated bathroom layout, it is the optimal choice for secluded spa units or rapid eco-resort expansions.</p>
+                    <span class="price-tag">Base Shell Starting at: 35,000 EUR</span>
+                    <a href="#vault" class="btn">Request ROI Analysis</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="customize" class="customize section">
-        <div class="customize-content container">
-            <h2>CUSTOMIZATION: The Elmo's Vision</h2>
-            <p>Your resort brand is unique. Your asset should be too. While we offer pristine factory-standard white shells, we also present the <span class="u-highlight">"Elmo's Vision"</span> — a radical, faceted design language with aggressive carbon-composites and integrated lighting systems. We provide the engineering; you define the custom masterpieces. Link in Confidential Dossier for customization options.</p>
-            <a href="#vault" class="btn">Customize your asset</a>
+    <section class="section" style="background-color: var(--section-bg);">
+        <div class="container" style="text-align: center;">
+            <h2>The Elmo's Vision Customization</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px auto;">We deliver pristine, factory-standard architecture. However, your brand identity is paramount. We offer the "Elmo's Vision" concept—a radical, faceted exterior design language utilizing aggressive carbon-composites and integrated atmospheric lighting. The shell is the canvas; the vision is yours.</p>
+            <img src="E3 elmo´s kuorissa vision 1.jpg" alt="Elmo's Vision Concepts" style="margin: 0 auto; max-width: 900px; border: 1px solid var(--border);">
         </div>
     </section>
 
     <footer id="vault">
         <div class="container">
             <h2>Confidential Client Portal</h2>
-            <p>Nordic Shell maintains strict discretion for our B2B partners. To access blueprints, detailed ROI data, and production timelines, please enter your reservation details below.</p>
+            <p style="max-width: 600px; margin: 0 auto 30px auto;">Nordic Shell operates with strict discretion for our B2B partners. To access full technical blueprints, ROI data, and secure a production slot, please proceed to the secure portal.</p>
             
-            <div class="secure-link">
-                [ 🔒 <a href="#">ACCESS SECURE PRODUCTION SLOT & CONFIDENTIAL DOSSIER</a> ]
-            </div>
+            <a href="https://nordic-shell.tally.so/VLYpky" class="btn" style="border-color: #333;">Enter Secure Portal</a>
             
-            <p class="copyright">&copy; 2026 Nordic Shell. All rights reserved. Engineering modular sovereignty.</p>
+            <p class="copyright">NORDIC SHELL &copy; 2026. ALL RIGHTS RESERVED.</p>
         </div>
-    </footer>
-
-</body>
-</html>
-                <div class="text-3xl mb-4">🔳</div>
-                <h3 class="font-semibold text-lg mb-2">Arctic Ready</h3>
-                <p class="text-gray-400 text-sm">150mm premium insulation. Built to withstand Nordic winters.</p>
-            </div>
-            <div class="glass-panel p-8 text-center">
-                <div class="text-3xl mb-4">✔️</div>
-                <h3 class="font-semibold text-lg mb-2">Certified</h3>
-                <p class="text-gray-400 text-sm">Full CE-certification. No legal headaches, pure peace of mind.</p>
-            </div>
-            <div class="glass-panel p-8 text-center">
-                <div class="text-3xl mb-4">🏗️</div>
-                <h3 class="font-semibold text-lg mb-2">Turnkey Delivery</h3>
-                <p class="text-gray-400 text-sm">Delivered directly from the factory floor to your plot.</p>
-            </div>
-            <div class="glass-panel p-8 text-center">
-                <div class="text-3xl mb-4">📱</div>
-                <h3 class="font-semibold text-lg mb-2">Zero-Contact</h3>
-                <p class="text-gray-400 text-sm">Smart-lock systems. Total isolation, if you wish.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-4 max-w-7xl mx-auto bg-zinc-950 rounded-3xl">
-        <div class="text-center mb-16 max-w-3xl mx-auto">
-            <h2 class="text-4xl font-light mb-6">The Collection.</h2>
-            <p class="text-gray-400">
-                A selection of our most elite modular designs, currently vetted by Seppo, our Chief Sourcing Agent. Each capsule meets our rigid Arctic insulation and CE standards.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <img src="gallery-1.jpg" alt="Capsule Exterior Concept" class="w-full h-80 object-cover rounded-xl border border-gray-800">
-            <img src="gallery-2.jpg" alt="Capsule Interior Concept" class="w-full h-80 object-cover rounded-xl border border-gray-800">
-            <img src="gallery-3.jpg" alt="Smart Lock Concept" class="w-full h-80 object-cover rounded-xl border border-gray-800">
-        </div>
-
-        <div class="text-center border-t border-gray-800 pt-8 max-w-4xl mx-auto">
-            <p class="text-gray-500 italic text-sm">
-                <strong class="text-gray-300">Disclaimer:</strong> The images above are conceptual visualizations of fully customized units. Our Nordic Shells are delivered as premium 'Bare Shell' foundations directly from the factory—a pristine blank canvas ready for your bespoke interior vision.
-            </p>
-        </div>
-    </section>
-
-    <section id="reserve" class="py-32 px-4 text-center max-w-4xl mx-auto">
-        <h2 class="text-4xl font-light mb-6">Be the Foundation of Synergy.</h2>
-        <p class="text-xl text-gray-400 mb-12">
-            Every Nordic Shell purchase finances the development of Synergy Campus – the world’s first truly zero-contact luxury retreat. Own a piece of the future.
-        </p>
-        
-        <div class="glass-panel p-10 md:p-16 mb-12">
-            <h3 class="text-2xl font-light mb-2">Investment</h3>
-            <div class="text-6xl font-light mb-6">€45,000</div>
-            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Includes delivery to your plot within Finland.</p>
-            
-            <hr class="border-gray-800 mb-8">
-            
-            <h4 class="font-semibold mb-2">Reservation Process</h4>
-            <p class="text-sm text-gray-400 mb-8">
-                A €2,500 fully refundable reservation deposit is required to secure your production slot. Our Elite Concierge will contact you within 24 hours to finalize details.
-            </p>
-            
-            <a href="https://tally.so/r/GxLPRL" target="_blank" class="inline-block bg-white text-black px-10 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-gray-300 transition-all w-full md:w-auto">
-                Secure Your Slot (€2,500 Deposit)
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center border-t border-gray-900 text-gray-600 text-sm">
-        <p>&copy; 2026 Elmo's Atelier / Synergy Campus. All rights reserved.</p>
     </footer>
 
 </body>
