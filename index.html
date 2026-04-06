@@ -96,6 +96,26 @@
         .blueprint-link:hover img { border-color: var(--accent); opacity: 0.8; }
         .price-tag { font-family: var(--font-header); font-size: 1.2rem; color: var(--accent); display: block; margin-bottom: 30px; letter-spacing: 1px; }
 
+        .specs-list {
+            list-style: none;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+        }
+        .specs-list li { margin-bottom: 8px; color: var(--text-secondary); }
+        .specs-list li strong { color: var(--text-main); }
+
+        .pdf-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-family: var(--font-header);
+            text-decoration: underline;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
         /* --- Footer --- */
         footer { padding: 80px 0; background-color: var(--section-bg); text-align: center; }
         .copyright { font-family: var(--font-header); font-size: 0.7rem; color: #666; margin-top: 40px; letter-spacing: 1px; }
@@ -140,7 +160,17 @@
                 <div class="model-info">
                     <h3>The E5 Panoramic Suite (Bare Shell)</h3>
                     <p class="u-highlight">Teollisen luokan moduulirunko. Tehtaan blank canvas -standardi.</p>
-                    <p>Designed to be the optimal high-yield asset for premium hospitality, the E5 features a sweeping panoramic glass front and a <span class="u-highlight">private integrated balcony</span>. This module is a pristine, uncustomized (blank canvass), engineering-grade Bare Shell, delivered fully ready from the factory for rapid deployment, allowing your unique vision to define the final experience and maximize ROI.</p>
+                    <p>Designed to be the optimal high-yield asset for premium hospitality, the E5 features a sweeping panoramic glass front and a <span class="u-highlight">private integrated balcony</span>. This module is a pristine, engineering-grade Bare Shell, delivered fully ready for rapid deployment.</p>
+                    
+                    <ul class="specs-list">
+                        <li><strong>Wind Resistance:</strong> Up to 12 Beaufort (approx. 32 m/s)</li>
+                        <li><strong>Roof Snow Load:</strong> 2.0 kN/m² (Reinforced for Nordic winter)</li>
+                        <li><strong>Structure:</strong> Galvanized steel frame / Double-glazed tempered glass</li>
+                        <li><strong>Dimensions:</strong> 8.5m x 3.2m x 3.2m (27.2 m²)</li>
+                    </ul>
+
+                    <a href="E5-Technical-Specifications.pdf" target="_blank" class="pdf-link">📄 Download Official E5 Technical Spec Sheet (PDF)</a>
+                    
                     <span class="price-tag">Base Shell Starting at: 45,000 EUR</span>
                     <a href="#vault" class="btn">Secure Production Slot</a>
                 </div>
@@ -164,7 +194,14 @@
                 <div class="model-info">
                     <h3>The E3 Compact Suite</h3>
                     <p class="u-highlight">Maximized efficiency. Zero compromises.</p>
-                    <p>The E3 is our most versatile structural shell. Engineered for locations where space is at a premium, it requires minimal footprint while delivering maximum luxury. Fully equipped with an integrated bathroom layout, it is the optimal choice for secluded spa units or rapid eco-resort expansions.</p>
+                    <p>The E3 is our most versatile structural shell. Engineered for locations where space is at a premium, it requires minimal footprint while delivering maximum luxury. Fully equipped with an integrated bathroom layout, it is the optimal choice for secluded spa units.</p>
+                    
+                    <ul class="specs-list">
+                        <li><strong>Optimized Footprint:</strong> Designed for steep or sensitive terrains</li>
+                        <li><strong>Deployment:</strong> Single-day installation on prepared base</li>
+                        <li><strong>Usage:</strong> Spa units, VIP suites, Eco-resort expansion</li>
+                    </ul>
+
                     <span class="price-tag">Base Shell Starting at: 35,000 EUR</span>
                     <a href="#vault" class="btn">Request ROI Analysis</a>
                 </div>
